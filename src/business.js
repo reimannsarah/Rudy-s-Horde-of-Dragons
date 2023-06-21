@@ -4,56 +4,52 @@ const storeState = (initialState) => {
     const newState = stateChangeFunction(currentState);
     currentState = { ...newState };
     return newState;
-  }
-}
+  };
+};
 
-export const horseMeatControl = storeState(horseMeat);
-export const motherOfGodControl = storeState({ stomach: 10, gord: 3, color: "yellow", slit: 3, toes: 2 });
-export const sandyPlungerControl = storeState({ toilet: 2, submersible: 10000, color: "red", rodent: "rat", putrid: "stank"});
+
+
 
 const changeState = (prop) => {
   return (value) => {
     return (state) => {
       return {
         ...state,
-        [prop]: (state[prop] || 0) + value
-      }
-    }
-  }
+        [prop]: (state[prop] || "") + value
+      };
+    };
+  };
+};
+
+const flopper = changeState("snake")(4);
+const flipper = changeState("snip")(66);
+const singer = changeState('sing')("la la la");
+const canWind = changeState("wind")('flap flap flap');
+const canHaveToes = changeState("toes")("tip tap tap");
+
+function toeFlyingDragon(name) {
+  const dragon = { name: name }
+
+  return {
+    ...dragon,
+    ...canWind(dragon),
+    ...canHaveToes(dragon),
+    ...flopper(dragon)
+  };
 }
 
-export const starburst = changeState("wind")(5);
-export const fireCooter = changeState("flame")(8);
-export const slanker = changeState("tail")(2);
-export const hoodler = changeState("color")("green")
-export const slipper = changeState("toes")(-6);
-export const okay = changeState("slit")(8);
+const mouseEatingDragon = (name) => {
+  const dragon = { name: name }
+  return {
+    ...dragon,
+    ...flipper(dragon),
+    ...canWind(dragon),
+    ...singer(dragon)
+  };
+};
 
-const canTail = () => {
-  const obj = {
-    tail: function(girth) {
-      return girth;
-    }
-  }
-  return obj;
-}
+const horseMeat = toeFlyingDragon("Horse Meat");
+const stinkoMalfoy = mouseEatingDragon("Sinko Malfoy");
 
-const canWind = () => {
-  const obj = {
-    wind: function(speed) {
-      return speed;
-    }
-  }
-  return obj;
-}
-
-const dragon = (name) => {
-  let state = {
-    name
-  }
-  return {...state, ...canTail, ...canWind}
-}
-
-const horseMeat = dragon("Horse Meat");
-
-horseMeat.canWind(6)
+export const horseMeatControl = storeState(horseMeat);
+export const stinkoMalfoyControl = storeState(stinkoMalfoy);
