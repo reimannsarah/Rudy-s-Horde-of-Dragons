@@ -1,7 +1,7 @@
 import './css/styles.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { grangerRangerControl, horseMeatControl, larryTheLobsterControl, puffTheMagicDragonControl, stinkoMalfoyControl } from './js/dragon';
+import { grangerRangerControl, horseMeatControl, larryTheLobsterControl, puffTheMagicDragonControl, stinkoMalfoyControl, crazyEyesControl } from './js/dragon';
 
 const getValues = (collection, object, id, callback) => {
   if (collection.length === 0) {
@@ -46,5 +46,10 @@ window.onload = () => {
   document.getElementById("show-ptmd").onclick = () => {
     const currentState = puffTheMagicDragonControl();
     getValues(Object.keys(currentState), currentState, 'all-values-ptmd', showValues);
+  };
+
+  document.getElementById("show-ce").onclick = () => {
+    const currentState = crazyEyesControl();
+    getValues(Object.keys(currentState), currentState, 'all-values-ce', showValues);
   };
 };
