@@ -1,3 +1,35 @@
-body {
-  background-color: lightblue;
+:root {
+  --purp: #533A71;
+  --blue: #2F97C1;
+  --red: #F34213;
+  --green: #9CEC5B;
+  --yellow: #F0F465;
+
+}
+
+.home-title {
+  text-align: center;
+}
+
+.dragons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+.dragon-card {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #F0F465;
+  border-radius: 20px;
+  padding: 14px;
 } 
+
+.dragon-card img {
+  border-radius: 20px;
+  padding: 10px;
+}
