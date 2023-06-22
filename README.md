@@ -1,8 +1,10 @@
-# (Application Name)
+# Functional Dragon Horde
 
-#### (Brief Description of Application)
+#### A simple application to practice functional programming logic
 
-#### By (Your Name Here)
+#### By Sarah Reimann and Emma Gerigscott
+
+![gif of webpage](./src/assets/images/dragonwench.gif)
 
 ## Technologies Used
 
