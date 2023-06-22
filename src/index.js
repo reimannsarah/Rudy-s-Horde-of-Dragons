@@ -1,7 +1,7 @@
 import './css/styles.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { horseMeatControl, stinkoMalfoyControl } from './business';
+import { horseMeatControl, stinkoMalfoyControl } from './js/dragon';
 
 const getValues = (collection, object, id, callback) => {
   if (collection.length === 0) {
