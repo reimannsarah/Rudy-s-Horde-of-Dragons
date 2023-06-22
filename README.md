@@ -15,6 +15,7 @@
 
 ## Description
 
+
 ## Setup/Installation Requirements
 
 * Install all packages with $ npm install.
@@ -22,11 +23,6 @@
 * Start a development server with $ npm run start
 * Lint JS files in the src folder with $ npm run lint
 * Run tests with Jest using $ npm run test
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
 
 ## Known Bugs
 
